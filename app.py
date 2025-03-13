@@ -75,7 +75,7 @@ if "messages" not in st.session_state or st.sidebar.button(("Clear message histo
 for msg in st.session_state["messages"]:
     st.chat_message(msg["role"]).write(msg["content"])
 
-user_query = st.chat_input(placeholder="Ask anything from the database e.g. Show me all students in the database")
+user_query = st.chat_input(placeholder="Ask anything from the database e.g. Show me all students in the students table of the database")
 
 if user_query:
     st.session_state.messages.append({"role": "user", "content": user_query})
